@@ -1,0 +1,8 @@
+<p>Error!</p>
+<%@errors_occured.each do |err|%>
+<p> <%= err[0] %> </p>
+<%end%>
+
+<form action="/error" class="form-inline" method="POST">
+	<button type="submit" class="btn" name="back">Powrot</button>
+</form>

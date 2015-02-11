@@ -1,0 +1,26 @@
+<p><%= @item.name %> <%= @item.surname %></p>
+<p><%= @item.login %></p>
+
+
+
+<% for num in 0...@num_subjects %>
+	<%= @subjects[num] %>
+
+	<table border=3>
+		<tr>
+			<% for elem in 0...@headings[num].size %>
+				<td bgcolor="#FFFFCC"><%= @headings[num][elem] %></td>
+			<%end%>
+			<td bgcolor="#FF5050">Srednia</td>
+		</tr>
+		<tr>
+			<% for elem in 0...@grades[num].size %>
+				<td><%= @grades[num][elem] %></td>
+			<%end%>
+			<td><%= @avgs[num] %></td>
+		</tr>
+	</table>
+
+	<br>
+	<br>
+<%end%>
